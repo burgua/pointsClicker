@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Twitch points clicker",
+    "description": "Automatically claims twitch points reward",
+    "version": "0.2",
+    "icons": {
+        "128": "icon_128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.twitch.tv/*"
+            ],
+            "js": ["jquery-3.4.1.slim.min.js", "code.js"]
+        }
+    ]
+}
