@@ -1,17 +1,12 @@
-const selector = '.tw-button.tw-button--success.tw-interactive';
-const clickDelay = 100;
-const checkDelay = 3000;
+const checkDelay = 300;
 
-const clicker = () => {
-    const buttons = $(selector);
-    if (buttons.length > 0) {
-        const button = buttons[0];
-        button.click();
+const clickRewardButton = () => {
+    const buttonsCollection = document.getElementsByClassName('tw-button--success');
+    const buttons = [].slice.call(buttonsCollection);
+
+    if (buttons && buttons.length) {
+        buttons[0].click();
     }
 };
 
-const timedOutCliker = () => {
-    setTimeout(clicker, clickDelay);
-};
-
-setInterval(timedOutCliker, checkDelay);
+setInterval(clickRewardButton, checkDelay);
